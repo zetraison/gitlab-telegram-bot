@@ -3,6 +3,8 @@ Gitlab telegram bot based on japronto and python-telegram-bot library.
 
 # Usage
 
+### Run container
+
 ```bash
 docker run -it --rm \
   -e TELEGRAM_PROXY_HOST=<proxy_host> \
@@ -13,3 +15,10 @@ docker run -it --rm \
   -e TELEGRAM_BOT_CHAT_ID=<bot_chat_id> \
   -e GITLAB_WEBHOOK_PORT=<gitlab_webhook_port> \
   zetraison/gitlab-telegram-bot
+```
+
+### Setup GitLab webhook URL
+
+```bash
+http://<host>:<gitlab_webhook_port>/webhook
+```
