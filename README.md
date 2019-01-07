@@ -17,6 +17,22 @@ docker run -it --rm \
   zetraison/gitlab-telegram-bot
 ```
 
+### Run pod in kubernetes
+
+```bash
+kubectl run gitlab-telegram-bot --image=zetraison/gitlab-telegram-bot:latest \
+  --env="TELEGRAM_PROXY_HOST=<proxy_host>" \
+  --env="TELEGRAM_PROXY_PORT=<proxy_port>" \
+  --env="TELEGRAM_PROXY_USERNAME=<username>" \
+  --env="TELEGRAM_PROXY_PASSWORD=<password>" \
+  --env="TELEGRAM_BOT_TOKEN=<bot_token>" \
+  --env="TELEGRAM_BOT_CHAT_ID=<bot_chat_id>" \
+  --env="GITLAB_WEBHOOK_PORT=<gitlab_webhook_port>" \
+  --port=8080
+  
+kubectl expose deployment gitlab-telegram-bot --type=NodePort
+```
+
 ### Setup GitLab webhook URL
 
 ```bash

@@ -73,8 +73,13 @@ def webhook_handler(request):
     return request.Response(json={})
 
 
+def healthcheck(request):
+    return request.Response(json={'status': 'ok'})
+
+
 # Initialize gitlab webhook handler
 app = Application()
 router = app.router
 router.add_route('/webhook', webhook_handler, method='POST')
+router.add_route('/healthcheck', healthcheck, method='GET')
 app.run(port=GITLAB_WEBHOOK_PORT)
