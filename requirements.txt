@@ -1,2 +1,2 @@
-japronto==0.1.2
+git+git://github.com/squeaky-pl/japronto@master#egg=japronto
 python-telegram-bot==12.7
