@@ -2,7 +2,10 @@ import unittest
 from request import Request
 
 
-class TesRequest(unittest.TestCase):
+class TestRequest(unittest.TestCase):
+    """
+    Test Request serialization
+    """
     def test_init(self):
         data = {
             "object_kind": "object_kind",
@@ -14,7 +17,9 @@ class TesRequest(unittest.TestCase):
             "homepage": "homepage",
             "commits": "commits"
         }
+
         request = Request(data)
+
         self.assertEqual(request.object_kind, "object_kind")
         self.assertEqual(request.event_name, "event_name")
         self.assertEqual(request.user_name, "user_name")

@@ -17,5 +17,8 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag docker.pkg.github.com/zetraison/gitlab-telegram-bot/gitlab-telegram-bot:latest
       
-    - name: Push the Docker image
+    - name: Push the Docker image to Github Registry
       run: docker push docker.pkg.github.com/zetraison/gitlab-telegram-bot/gitlab-telegram-bot:latest
+
+    - name: Push the Docker image to DockerHub Registry
+      run: docker push zetraison/gitlab-telegram-bot:latest
