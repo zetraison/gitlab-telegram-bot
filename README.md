@@ -1,8 +1,9 @@
 # gitlab-telegram-bot
-Gitlab telegram bot based on japronto and python-telegram-bot library.
 
 ![Python application](https://github.com/zetraison/gitlab-telegram-bot/workflows/Python%20application/badge.svg)
 ![Docker](https://github.com/zetraison/gitlab-telegram-bot/workflows/Docker/badge.svg)
+
+Gitlab telegram bot based on japronto and python-telegram-bot library.
 
 # Usage
 
